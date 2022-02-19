@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object Dection</title>
+  </head>
+
+
+  <body bgcolor = White>
+    <h1>Object Dection</h1>
+    <br>
+    <br>
+    <h2>Enter Image</h2>
+    <form method = "post" enctype = "multipart/form-data">
+		<input type = "file" name = "InputFile">
+		<br>
+		<br>
+		<input type = "submit">
+    </form>
+  </body>
+</html>
