@@ -73,7 +73,6 @@ Instruction :
 3) After running App.py file web link will be there like Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 4) Enter input image on this web link
 5) Now Input and Output image will be showing in this HTML page and both images has been saved under Dynamic folder of Deployment.
-6) 
-7) 
+ 
 
 
