@@ -25,27 +25,23 @@ bdd100k/images contains three other folders called train, test and val.
 bdd100k/labels contains two json files based on the label format for training and validation sets.
 
 #### Steps to build
-. Download the dataset and unzip the image and labels. Make sure you have \train folder with ~70k images as well as labels with train json file.
-
-. Clone the Yolov4 darknet repository. Configure the Makefile to enable training it on GPU.
+* Download the dataset and unzip the image and labels. Make sure you have \train folder with ~70k images as well as labels with train json file.
+* Clone the Yolov4 darknet repository. Configure the Makefile to enable training it on GPU.
 
 1. ```git clone https://github.com/pjreddie/darknet.git```
 2. ```cd darknet```
 3. ```make```
 
-. Convert the labels into a .txt format where each txt file contains label information of each image. The python script label_to_txt.py to convert this is present in the utils folder. Perform this conversion for both train and val images.
-
-. Check if the number of txt files and the images in the train folder are same. If found unequal, use the python script missing_image_&_label.py to remove the training image if no .txt information present.
-
-Generate train.txt and val.txt files as required by the yolov4. Use the python script test_val_txt.py to convert.
-
-Copy the bdd100k.data and bdd100k.names from the \data folder to a new folder (bdd100k_data) in the darknet yolov4 main folder.
+* Convert the labels into a .txt format where each txt file contains label information of each image. The python script label_to_txt.py to convert this is present in the utils folder. Perform this conversion for both train and val images.
+* Check if the number of txt files and the images in the train folder are same. If found unequal, use the python script missing_image_&_label.py to remove the training image if no .txt information present.
+* Generate train.txt and val.txt files as required by the yolov4. Use the python script test_val_txt.py to convert.
+* Copy the bdd100k.data and bdd100k.names from the \data folder to a new folder (bdd100k_data) in the darknet yolov4 main folder.
 
 1. ```cd darknet```
 2. ```mkdir bdd100k_data```
-Copy the yolov4-tiny-BDD100k.cfg from the \config folder to the same (bdd100_data) folder.
 
-Finally make sure you have the following files in the bdd100k_data folder.
+* Copy the yolov4-tiny-BDD100k.cfg from the \config folder to the same (bdd100_data) folder.
+* Finally make sure you have the following files in the bdd100k_data folder.
 
 train.txt
 val.txt
@@ -55,21 +51,21 @@ yolov4-tiny-BDD100k.cfg
 backup folder which stores the weights
 Download the yolov4 imagenet darknet53 weights
 
-Run the following on terminal for training the model
+* Run the following on terminal for training the model
 
 1. ```cd darknet```
 2. ```!./darknet detector train /content/gdrive/MyDrive/content/bdd100k/bdd100k.data /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show -map ```
 Test the model performance
 The yolov4 trained weights can be used to see the performance by running the following command on terminal.
 
-cd darknet
-```!./darknet detector demo /content/gdrive/MyDrive/content/bdd100k/bdd100k.data  /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show ```
+1. ```cd darknet```
+2. ```!./darknet detector demo /content/gdrive/MyDrive/content/bdd100k/bdd100k.data  /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show ```
 /content/gdrive/MyDrive/content/bdd100k/Traffic.mp4 -i 0 -out_filename 
 
 
 https://user-images.githubusercontent.com/95156513/155829352-86e0ae4c-f327-403f-a8d1-89f85403f80e.mp4
 
-Instruction :
+* Instruction :
 1) Update Paths of cfg file, names file, best weights file in App.py. All files are in Static folder under Deployment.
 1) Run App.py file that is in Deployment Folder.
 2) HTML files are in HTML folder. There are two files Input.html and Output.html
