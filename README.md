@@ -2,9 +2,7 @@
 https://drive.google.com/drive/folders/1-1RhYo6NAkyRishT9XiwOYDTmGGdMwb8?usp=sharing
 
 ### BDD100K-YOLOV4-tiny
-Road Object detection on BDD100K using Yolov4-tiny-tiny trained on Jetson Xavier
-
-### Link to the video
+Road Object detection on BDD100K using Yolov4-tiny-tiny.
 
 #### Barkeley DeepDrive Dataset
 The largest open driving video dataset with 100K videos and 10 tasks to evaluate the exciting progress of image recognition algorithms on autonomous driving. Each video has 40 seconds and a high resolution. The dataset represents more than 1000 hours of driving experience with more than 100 million frames. The videos comes with GPU/IMU data for trajectory information. The dataset possesses geographic, environmental, and weather diversity, which is useful for training models that are less likely to be surprised by new conditions. The dynamic outdoor scenes and complicated ego-vehicle motion make the perception tasks even more challenging. The tasks on this dataset include image tagging, lane detection, drivable area segmentation, road object detection, semantic segmentation, instance segmentation, multi-object detection tracking, multi-object segmentation tracking, domain adaptation, and imitation learning.
