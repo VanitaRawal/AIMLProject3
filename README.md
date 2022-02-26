@@ -18,21 +18,24 @@ This repository requires the following dependencies and dataset
 1. Berkeley DeepDrive Dataset - Download the Images and Labels (Total size bdd100k_images.zip - 6.8 GB)
 Yolov4
 2. Understanding the Dataset
+
 After being unzipped, all the files will reside in a folder named bdd100k. All the images will reside in bdd100k/images and labels in bdd100k/labels. The images contains the frame at 10th second in the corresponding video.
 
 bdd100k/images contains three other folders called train, test and val.
 bdd100k/labels contains two json files based on the label format for training and validation sets.
-Steps to build
-Download the dataset and unzip the image and labels. Make sure you have \train folder with ~70k images as well as labels with train json file.
 
-Clone the Yolov4 darknet repository. Configure the Makefile to enable training it on GPU.
+#### Steps to build
+. Download the dataset and unzip the image and labels. Make sure you have \train folder with ~70k images as well as labels with train json file.
+
+. Clone the Yolov4 darknet repository. Configure the Makefile to enable training it on GPU.
 
 1. ```git clone https://github.com/pjreddie/darknet.git```
 2. ```cd darknet```
 3. ```make```
-Convert the labels into a .txt format where each txt file contains label information of each image. The python script label_to_txt.py to convert this is present in the utils folder. Perform this conversion for both train and val images.
 
-Check if the number of txt files and the images in the train folder are same. If found unequal, use the python script missing_image_&_label.py to remove the training image if no .txt information present.
+. Convert the labels into a .txt format where each txt file contains label information of each image. The python script label_to_txt.py to convert this is present in the utils folder. Perform this conversion for both train and val images.
+
+. Check if the number of txt files and the images in the train folder are same. If found unequal, use the python script missing_image_&_label.py to remove the training image if no .txt information present.
 
 Generate train.txt and val.txt files as required by the yolov4. Use the python script test_val_txt.py to convert.
 
