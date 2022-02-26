@@ -55,12 +55,12 @@ Download the yolov4 imagenet darknet53 weights
 Run the following on terminal for training the model
 
 cd darknet
-!./darknet detector train /content/gdrive/MyDrive/content/bdd100k/bdd100k.data /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show -map 
+```!./darknet detector train /content/gdrive/MyDrive/content/bdd100k/bdd100k.data /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show -map ```
 Test the model performance
 The yolov4 trained weights can be used to see the performance by running the following command on terminal.
 
 cd darknet
-!./darknet detector demo /content/gdrive/MyDrive/content/bdd100k/bdd100k.data  /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show 
+```!./darknet detector demo /content/gdrive/MyDrive/content/bdd100k/bdd100k.data  /content/gdrive/MyDrive/content/Yolov4_tiny_changes.cfg /content/gdrive/MyDrive/content/bdd100k/backup/Yolov4_tiny_changes_last.weights -dont_show ```
 /content/gdrive/MyDrive/content/bdd100k/Traffic.mp4 -i 0 -out_filename 
 
 
