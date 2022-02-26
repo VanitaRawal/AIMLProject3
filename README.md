@@ -66,3 +66,14 @@ cd darknet
 
 https://user-images.githubusercontent.com/95156513/155829352-86e0ae4c-f327-403f-a8d1-89f85403f80e.mp4
 
+Instruction :
+1) Update Paths of cfg file, names file, best weights file in App.py. All files are in Static folder under Deployment.
+1) Run App.py file that is in Deployment Folder.
+2) HTML files are in HTML folder. There are two files Input.html and Output.html
+3) After running App.py file web link will be there like Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+4) Enter input image on this web link
+5) Now Input and Output image will be showing in this HTML page and both images has been saved under Dynamic folder of Deployment.
+6) 
+7) 
+
+
